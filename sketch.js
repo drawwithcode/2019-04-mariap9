@@ -14,7 +14,6 @@ function togglePlay() {
   } else {
     song.stop();
   }
-
 }
 
 function setup() {
@@ -33,13 +32,14 @@ function setup() {
 
 
 function draw() {
+  background(255);
   // call the image file as background
   image(illus, windowWidth / 2, (windowHeight / 2) - 50, illus.width / 2, illus.height / 2);
   let rms = analyzer.getLevel();
   fill(200, 200, 200, 50);
   stroke(0);
   strokeWeight(1.5);
-  ellipse((width / 2) - 32, (height / 2) + 55, 15 + rms * 250, 3 + rms * 700);
+  ellipse((width / 2) - 32, (height / 2) + 55, 15 + rms * 300, 3 + rms * 700);
 
 
   var titlehome = "· A home solo ·";
